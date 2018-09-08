@@ -1,9 +1,10 @@
 (ns ^:figwheel-hooks hello-hdom.core
   (:require
    [goog.dom :as gdom]
-   [hdom :as hdom]))
+   [hdom :refer [setAttribs]]))
 
-(println hdom)
+(println 'hdom/clearDOM (exists? hdom/clearDOM))
+(println 'setAttribs (exists? setAttribs))
 (println "This text is printed from src/hello_hdom/core.cljs. Go ahead and edit it and see reloading in action.")
 
 (defn multiply [a b] (* a b))
