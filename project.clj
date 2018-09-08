@@ -18,11 +18,11 @@
             "fig:test"  ["run" "-m" "figwheel.main" "-co" "test.cljs.edn" "-m" hello-hdom.test-runner]}
 
 
-  :figwheel {:cljsbuild {:builds [{:id       "dev"
-                                   :compiler {:externs      ["externs/hdom.js"]
-                                              :foreign-libs [{:file     "foreign/dist.js"
-                                                              :file-min "foreign/dist.min.js"
-                                                              :provides ["hdom"]}]}}]}}
+  :cljsbuild {:builds [{:id       "dev"
+                        :compiler {:externs      ["externs/hdom.js"]
+                                   :foreign-libs [{:file     "foreign/dist.js"
+                                                   :file-min "foreign/dist.min.js"
+                                                   :provides ["hdom"]}]}}]}
 
   :profiles {:dev {:dependencies   [[com.bhauman/figwheel-main "0.1.9"]
                                     [com.bhauman/rebel-readline-cljs "0.1.4"]]
