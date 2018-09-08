@@ -10,19 +10,12 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.339"]]
 
-  :source-paths ["src" "foreign" "externs"]
+  :source-paths ["src"]
 
   :aliases {"fig"       ["trampoline" "run" "-m" "figwheel.main"]
             "fig:build" ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]
             "fig:min"   ["run" "-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]
             "fig:test"  ["run" "-m" "figwheel.main" "-co" "test.cljs.edn" "-m" hello-hdom.test-runner]}
-
-
-  :cljsbuild {:builds [{:id       "dev"
-                        :compiler {:externs      ["externs/hdom.js"]
-                                   :foreign-libs [{:file     "foreign/dist.js"
-                                                   :file-min "foreign/dist.min.js"
-                                                   :provides ["hdom"]}]}}]}
 
   :profiles {:dev {:dependencies   [[com.bhauman/figwheel-main "0.1.9"]
                                     [com.bhauman/rebel-readline-cljs "0.1.4"]]

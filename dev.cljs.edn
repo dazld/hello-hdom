@@ -2,7 +2,6 @@
   :css-dirs ["resources/public/css"]
   :auto-testing true}
 {:main hello-hdom.core
- :compiler {:externs      ["externs/hdom.js"]
-            :foreign-libs [{:file     "foreign/dist.js"
-                            :file-min "foreign/dist.min.js"
-                            :provides ["hdom"]}]}}
+ :compiler-options {:externs      ["externs/hdom-extern.js"]
+                    :foreign-libs [{:file     "foreign/hdom.js"
+                                    :provides ["hdom"]}]}}
