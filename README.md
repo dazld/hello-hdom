@@ -1,9 +1,6 @@
-# NOT FUNCTIONAL 
-
-
 # hello-hdom
 
-FIXME: Write a one-line description of your library/project.
+playground for working with @thi.ng/hdom from clojurescript 
 
 ## Overview
 

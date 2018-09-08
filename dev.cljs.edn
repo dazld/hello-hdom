@@ -1,8 +1,10 @@
 ^{:watch-dirs ["test" "src"]
   :css-dirs ["resources/public/css"]
   :auto-testing true}
+
+; compiler options for CLJS
 {:main hello-hdom.core
  :externs      ["externs/hdom-extern.js"]
  :foreign-libs [{:file     "foreign/hdom.js"
-                :provides ["hdom"]
-                :global-exports {hdom hdom}}]}
+                 :provides ["hdom"]
+                 :global-exports {hdom hdom}}]}
